@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Plex Update for Synology NAS
+# Script to automagically update Plex Media Server on Synology NAS
+#
+# Must be run as root.
+#
 # @author @martinorob https://github.com/martinorob
 # https://github.com/martinorob/plexupdate/
 
