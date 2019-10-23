@@ -1,7 +1,9 @@
-# Plex Update for Synology NAS
-# by @martinorob
-# https://github.com/martinorob/plexupdate/
 #!/bin/bash
+
+# Plex Update for Synology NAS
+# @author @martinorob https://github.com/martinorob
+# https://github.com/martinorob/plexupdate/
+
 mkdir /volume1/plextemp/ > /dev/null 2>&1
 token=$(cat /volume1/Plex/Library/Application\ Support/Plex\ Media\ Server/Preferences.xml | grep -oP 'PlexOnlineToken="\K[^"]+')
 url=$(echo "https://plex.tv/api/downloads/5.json?channel=plexpass&X-Plex-Token=$token")
