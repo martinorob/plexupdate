@@ -15,7 +15,7 @@ newversion=$(echo $jq | jq -r .nas.Synology.version)
 echo New Ver: $newversion
 curversion=$(synopkg version "Plex Media Server")
 echo Cur Ver: $curversion
-if [ "$newversion" = "$curversion" ]
+if [ "$newversion" != "$curversion" ]
 then
 echo New Vers Available
 /usr/syno/bin/synonotify PKGHasUpgrade '{"[%HOSTNAME%]": $(hostname), "[%OSNAME%]": "Synology", "[%PKG_HAS_UPDATE%]": "Plex", "[%COMPANY_NAME%]": "Synology"}'
