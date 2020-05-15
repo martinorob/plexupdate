@@ -21,11 +21,11 @@ echo New Vers Available
 /usr/syno/bin/synonotify PKGHasUpgrade '{"[%HOSTNAME%]": $(hostname), "[%OSNAME%]": "Synology", "[%PKG_HAS_UPDATE%]": "Plex", "[%COMPANY_NAME%]": "Synology"}'
 cpu=$(uname -m)
 if [ "$cpu" = "x86_64" ]; then
-url=$(echo $jq | jq -r ".nas.Synology.releases[1] | .url")
+ url=$(echo $jq | jq -r ".nas.Synology.releases[1] | .url")
 elif [ "$cpu" = "armv7l" ]; then
-url=$(echo $jq | jq -r ".nas.Synology.releases[4] | .url")
+ url=$(echo $jq | jq -r ".nas.Synology.releases[4] | .url")
 else
-url=$(echo $jq | jq -r ".nas.Synology.releases[0] | .url")
+ url=$(echo $jq | jq -r ".nas.Synology.releases[0] | .url")
 fi
 /bin/wget $url -P /volume1/tmp/plex/
 /usr/syno/bin/synopkg install /volume1/tmp/plex/*.spk
