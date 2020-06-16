@@ -21,4 +21,4 @@ rm -rf /tmp/plex/*
 else
 echo No New Ver
 fi
-exit1
+exit
