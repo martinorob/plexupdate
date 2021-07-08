@@ -3,8 +3,8 @@
 #
 # Must be run as root.
 #
-# @author Martino https://forums.plex.tv/u/Martino
-# @see https://forums.plex.tv/t/script-to-auto-update-plex-on-synology-nas-rev4/479748
+# @author @martinorob https://github.com/martinorob
+# https://github.com/martinorob/plexupdate/
 
 mkdir -p /tmp/plex/
 DSM=$(cat /etc/VERSION | grep -oP 'majorversion="\K[^"]+')
